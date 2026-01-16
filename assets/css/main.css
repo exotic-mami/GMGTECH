@@ -4177,3 +4177,25 @@ body:not(.is-preload):before {
   border-radius: 50%;
   object-fit: cover;
 }
+
+/* FIX: prevent logo from filling header */
+#header .logo.logo-image {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+}
+
+/* FIX: prevent logo image from stretching */
+#header .logo.logo-image img {
+  width: 48px;
+  height: 48px;
+  max-width: none;
+  flex-shrink: 0;
+}
+
+/* Keep text beside logo */
+#header .logo-text {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 12px;
+}
