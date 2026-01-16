@@ -4178,12 +4178,18 @@ body:not(.is-preload):before {
   object-fit: cover;
 }
 
-/* FORCE header to match local VS Code appearance */
-#header.solid {
-  background-color: rgba(0, 0, 0, 0.85);
+/* FORCE solid nav bar everywhere */
+#header {
+  background-color: rgba(0, 0, 0, 0.85) !important;
 }
 
-/* Prevent banner image bleed-through */
+/* Prevent banner from appearing behind header */
 #banner {
-  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+#header {
+  position: fixed;
+  z-index: 10000;
 }
